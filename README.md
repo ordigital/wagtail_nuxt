@@ -34,13 +34,13 @@ You can generate new key by command:
 $ ./manage.py shell -c "from django.core.management.utils import get_random_secret_key; print(get_random_secret_key())"
 ```
 
-## Deploying for production:
-*[ soon… ]*
-
-## Tips for editing
-- first take a closer look at `docker-compose.yml` in root directory and `Dockerfile` in `frontend` and `backend` directory to understand what is happening
+## Tips:
+- first take a closer look at `docker-compose.yml` in root directory, `Dockerfile` in `frontend` and `backend` dir, and 'docker-entrypoint.sh` in `backend` dir to understand what is happening
 - default app is in `backend/app` folder
 - GraphQL schema is in `backend/app/schema.py` and is connected to `models.py`
+
+## Deploying for production:
+*[ soon… ]*
 
 ## Run Wagtail without Docker
 ```bash
