@@ -1,0 +1,20 @@
+{% extends "wagtailadmin/shared/header_with_locale_selector.html" %}
+{% load wagtailadmin_tags i18n %}
+
+{% block extra_rows %}
+    {% if latest_log_entry %}
+        <div class="row last-updated">
+            <ul>
+                <li>
+                    <span class="avatar small" data-wagtail-tooltip="{{ latest_log_entry.user_display_name }}"><img src="{% avatar_url latest_log_entry.user size=25 %}" alt="" decoding="async" loading="lazy"/></span>
+                    {% trans "Last updated" %}
+                    {% include "wagtailadmin/shared/last_updated.html" with last_updated=latest_log_entry.timestamp show_time_prefix=True %}
+                </li>
+                {% if history_url %}
+                    <li><a href="{{ history_url }}">{% icon "history" class_name="default" %} {% trans "History" %}</a></li>
+                {% endif %}
+                <li>{% icon "snippet" class_name="default" %} {{ model_opts.verbose_name|capfirst }}</li>
+            </ul>
+        </div>
+    {% endif %}
+{% endblock %}

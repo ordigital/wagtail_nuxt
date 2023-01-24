@@ -1,0 +1,1025 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Translators:
+# Delgermurun Purevkhuuu <info@delgermurun.com>, 2014
+# Delgermurun Purevkhuuu <info@delgermurun.com>, 2014
+# Myagmarjav Enkhbileg <miigaa.lucky@gmail.com>, 2019
+# Soft Exim, 2022
+msgid ""
+msgstr ""
+"Project-Id-Version: Wagtail\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-10-28 12:02+0100\n"
+"PO-Revision-Date: 2014-02-21 15:50+0000\n"
+"Last-Translator: Soft Exim, 2022\n"
+"Language-Team: Mongolian (http://www.transifex.com/torchbox/wagtail/language/"
+"mn/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: mn\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Publish"
+msgstr "Нийтлэх"
+
+msgid "Submit for moderation"
+msgstr "Хянуулахаар илгээсэн"
+
+msgid "Resubmit to {}"
+msgstr "{} -д дахин бүртгүүлэх"
+
+msgid "Submit to {}"
+msgstr "{} -д бүртгүүлэх"
+
+msgid "Restart workflow "
+msgstr "Ажлын урсгалыг дахин эхлүүлэх"
+
+msgid "Cancel workflow "
+msgstr "Ажлын урсгалыг цуцлах"
+
+msgid "Unpublish"
+msgstr "Нийтлэхгүй байх"
+
+msgid "Save Draft"
+msgstr "Ноорог хадгалах"
+
+msgid "Page locked"
+msgstr "Хуудас түгжигдсэн"
+
+#, python-format
+msgid "%(label)s and Publish"
+msgstr "%(label)s , нийтлэх"
+
+msgid "Wagtail admin"
+msgstr "Админ панел"
+
+msgid "Sorry, you do not have permission to access this area."
+msgstr "Танд энэ хэсэгт хандах эрх алга."
+
+msgid "You do not have permission to access the admin"
+msgstr "Та админ панел руу нэвтрэх эрхгүй"
+
+msgid "None"
+msgstr "Хоосон"
+
+msgid "Date from"
+msgstr "Эхлэх огноо"
+
+msgid "Date to"
+msgstr "Дуусах огноо"
+
+msgid "All"
+msgstr "Бүгд"
+
+msgid "Preferred language"
+msgstr "Сонгосон хэл"
+
+msgid "Current time zone"
+msgstr "Одоогийн цагийн бүс"
+
+msgid "First Name"
+msgstr "Нэр"
+
+msgid "Last Name"
+msgstr "Овог"
+
+msgid "Email"
+msgstr "Имейл"
+
+msgid "Upload a profile picture"
+msgstr "Профайл зураг оруулах"
+
+msgid "Enter password"
+msgstr "Нууц үг оруулна уу"
+
+#, python-format
+msgid "Enter your %s"
+msgstr "Өөрийн%s оруулна уу"
+
+msgid "Enter your email address to reset your password"
+msgstr "Нууц үгээ шинээр сэргээхийн тулд имейл хаягаа оруулна уу"
+
+msgid "URL"
+msgstr "URL хаяг"
+
+msgid "Search term"
+msgstr "Хайлтын утга"
+
+msgid "Search"
+msgstr "Хайлт"
+
+msgid "All collections"
+msgstr "Цуглуулга нэмэх"
+
+msgid "Collection"
+msgstr "Цуглуулга"
+
+msgid "Parent"
+msgstr "Эцэг"
+
+msgid ""
+"Select hierarchical position. Note: a collection cannot become a child of "
+"itself or one of its descendants."
+msgstr ""
+"Байршлын дарааллыг сонгох. Жич: колекцыг хүү эсвэл удамшуулах боломжгүй."
+
+msgid "Please select another parent"
+msgstr "Өөр эцэг төрслийг сонгоно уу"
+
+msgid "You cannot have multiple permission records for the same collection."
+msgstr "Нэг цуглуулганд олон хандалтын эрхийн бичлэг тохируулах боломжгүй."
+
+msgid "Add"
+msgstr "Нэмэх"
+
+msgid "Add collections"
+msgstr "Колекц нэмэх"
+
+msgid "Edit"
+msgstr "Засах"
+
+msgid "Edit collections"
+msgstr "Колекц засах"
+
+msgid "Delete"
+msgstr "Устгах"
+
+msgid "Delete collections"
+msgstr "Колекц устгах"
+
+msgid "You cannot edit another user's comment."
+msgstr "Та өөр хэрэглэгчийн сэтгэгдлийг засах боломжгүй."
+
+msgid "Go live date/time must be before expiry date/time"
+msgstr "Нийтлэх өдөр/цаг нь хаагдах цаг/өдрөөсөө өмнө байх ёстой"
+
+msgid "Expiry date/time must be in the future"
+msgstr "Хаагдах өдөр/цаг нь ирээдүй цагт байх ёстой"
+
+msgid "New title"
+msgstr "Шинэ гарчиг"
+
+msgid "New slug"
+msgstr "Шинэ слаг"
+
+msgid "New parent page"
+msgstr "Шинэ эцэг хуудас"
+
+msgid "This copy will be a child of this given parent page."
+msgstr "Энэ хуулбар нь өгөгдсөн эцэг хуудсын дэд хуудас болно."
+
+msgid "Copy subpages"
+msgstr "Дэд хуудсуудыг хуулах"
+
+#, python-format
+msgid "This will copy %(count)s subpage."
+msgid_plural "This will copy %(count)s subpages."
+msgstr[0] "Ингэснээр %(count)s дэд хуудсыг хуулах болно."
+msgstr[1] "This will copy %(count)s subpages."
+
+msgid "Publish copied page"
+msgstr "Хуулсан хуудсыг нийтлэх"
+
+msgid "This page is live. Would you like to publish its copy as well?"
+msgstr "Энэ хуудас нийтлэгдсэн. Хуулбарыг нь хэвлэхдээ итгэлтэй байна уу?"
+
+msgid "Publish copies"
+msgstr "Хуулбаруудыг нийтлэх"
+
+#, python-format
+msgid ""
+"%(count)s of the pages being copied is live. Would you like to publish its "
+"copy?"
+msgid_plural ""
+"%(count)s of the pages being copied are live. Would you like to publish "
+"their copies?"
+msgstr[0] ""
+"%(count)s хуулагдаж буй хуудас нийтлэгдсэн байна. Хуулбарыг нь нийтлэхдээ "
+"итгэлтэй байна уу?"
+msgstr[1] ""
+"%(count)s хуулагдаж буй хуудас нийтлэгдсэн байна. Хуулбарыг нь нийтлэхдээ "
+"итгэлтэй байна уу?"
+
+msgid "Alias"
+msgstr "Орлуулах зохиомол нэр"
+
+msgid "Keep the new pages updated with future changes"
+msgstr "Хуудсыг ирээдүйд шинэчлэгдэж байхаар хадгалах"
+
+#, python-format
+msgid "You do not have permission to copy to page \"%(page_title)s\""
+msgstr "Танд \"%(page_title)s\" хуудас руу хуулах эрх алга."
+
+#, python-format
+msgid ""
+"This slug is already in use within the context of its parent page \"%s\""
+msgstr "\"%s\" эцэг хуудсанд ийм замтай мэдээ өмнө нь хадгалагдсан байна."
+
+msgid "You cannot copy a page into itself when copying subpages"
+msgstr ""
+"Дэд хуудсуудтай хуулж байгаа үед өөрийн дэд хуудас руу хуулах боломжгүй"
+
+msgid "This slug is already in use"
+msgstr "Ийм слагтай мэдээ өмнө нь нийтлэгдсэн байна"
+
+msgid "Select a new parent for this page."
+msgstr "Энэ хуудасны эцгийг шинээр сонгох"
+
+#, python-format
+msgid "Tag(s) %(value_too_long)s are over %(max_tag_length)d characters"
+msgstr ""
+"Таг нь %(max_tag_length)d тэмдэгтийн урттай байхаас %(value_too_long)s байна."
+
+msgid "Visibility"
+msgstr "Харагдац"
+
+msgid "This field is required."
+msgstr "Энэ талбарыг заавал бөглөх шаардлагатай."
+
+msgid "Please select at least one group."
+msgstr "Ядаж нэг бүлэг сонгоно уу."
+
+msgid "All types"
+msgstr "Бүх төрөл"
+
+#, python-brace-format
+msgid "This page already has workflow '{0}' assigned."
+msgstr "Энэ хуудсанд '{0}' ажлын урсгал оноосон байна."
+
+msgid "Give your workflow a name"
+msgstr "Ажлын урсгалдаа нэр өгөх"
+
+msgid "Add tasks to your workflow"
+msgstr "Ажлын урсгалдаа даалгавар нэмэх"
+
+msgid "Task"
+msgstr "Даалгавар"
+
+msgid "1 page selected"
+msgstr "Сонгосон 1 хуудас"
+
+#, python-brace-format
+msgid "{0} pages selected"
+msgstr "Сонгогдсон хуудас {0} "
+
+msgid "All pages in listing selected"
+msgstr "Жагсаалтаас сонгосон бүх хуудас"
+
+msgid "Page title"
+msgstr "Хуудасны гарчиг"
+
+msgid "Content"
+msgstr "Контент"
+
+msgid "Promote"
+msgstr "Бусад тохиргоо"
+
+msgid "Settings"
+msgstr "Тохиргоо"
+
+msgid "Error 404: Page not found"
+msgstr "Алдаа 404: Хуудас олдсонгүй"
+
+msgid "Error 404"
+msgstr "Алдаа 404"
+
+msgid "The requested page could not be found."
+msgstr "Хандахыг хүссэн хуудас олдсонгүй."
+
+msgid "Go to Wagtail admin"
+msgstr "Админ панел руу очих"
+
+msgid "Account"
+msgstr "Хэрэглэгчийн эрх"
+
+msgid "Save account details"
+msgstr "Аккаунтын дэлгэрэнгүйг хадгалах"
+
+msgid "Reset password"
+msgstr "Нууц үгээ сэргээх"
+
+msgid "Password change successful"
+msgstr "Нууц үг амжилттай солигдлоо"
+
+msgid "Login"
+msgstr "Нэвтрэх"
+
+msgid "Set your new password"
+msgstr "Шинэ нууц үг тохируулах"
+
+msgid "Invalid password reset link"
+msgstr "Нууц үг сэргээх холбоос алдаатай байна"
+
+msgid ""
+"The password reset link was invalid, possibly because it has already been "
+"used."
+msgstr ""
+"Нууц үг сэргээх холбоос алдаатай байна, өмнө нь ашигласан байж магадгүй."
+
+msgid "Request a new password reset"
+msgstr "Нууц үг сэргээх хүсэлт үүсгэх"
+
+msgid "Check your email"
+msgstr "Имейл хаягаа шалгана уу"
+
+msgid ""
+"A link to reset your password has been emailed to you if an account exists "
+"for this address."
+msgstr ""
+"Ийм имейл хаягтай хэрэглэгч бүртгэлтэй бол энэ хаяг руу нууц үг сэргээх "
+"холбоос илгээгдлээ."
+
+msgid "Please follow the link below to reset your password:"
+msgstr "Доорх холбоосыг дарж нууц үгээ сэргээнэ үү:"
+
+msgid "Your username (in case you've forgotten):"
+msgstr "Хэрэглэгчийн нэр (Та хэрэглэгчийн нэрээ мартсан бол):"
+
+msgid "Password reset"
+msgstr "Нууц үг сэргээх"
+
+msgid "Reset your password"
+msgstr "Нууц үгээ сэргээх"
+
+msgid "Upload a profile picture:"
+msgstr "Профайл зураг оруулах:"
+
+msgid "Reset to default"
+msgstr "Дахин өгөгдмөл болгох"
+
+msgid "Sidebar"
+msgstr "Сайдбар"
+
+msgid "Go back"
+msgstr "Буцах"
+
+msgid "Select row"
+msgstr "Багана сонгох"
+
+msgid "Select all"
+msgstr "Бүгдийг сонгох"
+
+msgid "Internal link"
+msgstr "Дотоод холбоос"
+
+msgid "External link"
+msgstr "Гадаад холбоос"
+
+msgid "Email link"
+msgstr "Имейл хаяг"
+
+msgid "Anchor link"
+msgstr "Анкер линк"
+
+msgid "Add an anchor link"
+msgstr "Анкер линк нэмэх"
+
+msgid "Insert anchor"
+msgstr "Анкер оруулах"
+
+msgid "Choose"
+msgstr "Сонгох"
+
+msgid "Choose a page"
+msgstr "Хуудас сонгох"
+
+msgid "Convert to internal link"
+msgstr "Дотоод линк рүү хөрвүүлэх"
+
+msgid "Use external link"
+msgstr "Гадаад линк ашиглах"
+
+msgid "Add an email link"
+msgstr "Имейлийн линк нэмэх"
+
+msgid "Insert link"
+msgstr "Холбоос оруулах"
+
+msgid "Add an external link"
+msgstr "Гадаад холбоос оруулах"
+
+msgid "Collection privacy"
+msgstr "Цуглуулгын нууцлалын тохиргоо"
+
+msgid "You can edit the privacy settings on:"
+msgstr "Нууцлалын тохиргоог өөрчлөх боломжтой:"
+
+msgid "Save"
+msgstr "Хадгалах"
+
+msgid "Change privacy"
+msgstr "Нууцлалыг өөрлчөх"
+
+msgid "Privacy"
+msgstr "Нууцлал"
+
+msgid "Public"
+msgstr "Нийтэд нээлттэй"
+
+msgid "Private"
+msgstr "Хувийн"
+
+msgid "Name"
+msgstr "Нэр"
+
+msgid "Yes, delete"
+msgstr "Тийм, устга"
+
+msgid "Update"
+msgstr "Шинэчлэх"
+
+#, python-format
+msgid "Comparing %(title)s"
+msgstr "%(title)s-г харьцуулж байна"
+
+msgid "Comparing"
+msgstr "Харьцуулж байна"
+
+msgid "Fields"
+msgstr "Талбарууд"
+
+msgid "Changes"
+msgstr "Өөрчлөлтүүд"
+
+#, python-format
+msgid "Welcome to the %(site_name)s Wagtail CMS"
+msgstr "\"%(site_name)s Wagtail CMS\"-д тавтай морил"
+
+msgid ""
+"This is your dashboard on which helpful information about content you've "
+"created will be displayed."
+msgstr ""
+"Энэ хянах самбар дээр таны үүсгэсэн контентын талаар хэрэгцээт мэдээлэл "
+"харагдана."
+
+msgid "Your locked pages"
+msgstr "Түгжигдсэн хуудсууд"
+
+msgid "Title"
+msgstr "Гарчиг"
+
+msgid "Locked at"
+msgstr "Түгжигдсэн"
+
+msgid "Edit this page"
+msgstr "Энэ хуудсыг засах"
+
+msgid "Unlock"
+msgstr "Түгжээг тайлах"
+
+msgid "Draft"
+msgstr "Ноорог"
+
+msgid "Live"
+msgstr "Нийтлэгдсэн"
+
+msgid "Pages awaiting moderation"
+msgstr "Хянагдахаар хүлээгдэж буй хуудсууд"
+
+msgid "Type"
+msgstr "Төрөл"
+
+msgid "Edited"
+msgstr "Засагдсан"
+
+msgid "Preview this page"
+msgstr "Хуудсыг урдчилж харах"
+
+msgid "Approve"
+msgstr "Зөвшөөрөх"
+
+msgid "Reject"
+msgstr "Татгалзах"
+
+msgid "Preview"
+msgstr "Урдчилж харах"
+
+msgid "Your most recent edits"
+msgstr "Таны сүүлийн засварууд"
+
+msgid "Status"
+msgstr "Төлөв"
+
+msgid "Date"
+msgstr "Огноо"
+
+msgid "Site summary"
+msgstr "Сайтын хураангуй"
+
+msgid "Close"
+msgstr "Хаах"
+
+msgid "Sign in"
+msgstr "Нэвтрэх"
+
+msgid "Sign in to Wagtail"
+msgstr "Нэвтрэх"
+
+#, python-format
+msgid "Your %(username_field)s and password didn't match. Please try again."
+msgstr ""
+"Таны %(username_field)s болон нууц үг тохирохгүй байна. Дахин оролдоно уу."
+
+msgid "Signing in…"
+msgstr "Нэвтэрч байна..."
+
+#, python-format
+msgid "The page \"%(title)s\" has been approved."
+msgstr "\"%(title)s\" хуудас зөвшөөрөгдлөө."
+
+msgid "You can view the page here:"
+msgstr "Хуудсыг эндээс харах боломжтой:"
+
+#, python-format
+msgid "The page \"%(title)s\" has been approved"
+msgstr "\"%(title)s\" хуудас зөвшөөрөгдлөө."
+
+#, python-format
+msgid "Hello %(username)s,"
+msgstr "Сайн байна уу %(username)s,"
+
+msgid "Edit your notification preferences here:"
+msgstr "Мэдэгдлийн тохиргоогоо энд засна уу:"
+
+#, python-format
+msgid "The page \"%(title)s\" has been rejected."
+msgstr "\"%(title)s\" хуудсыг нийтлэхээс татгалзлаа."
+
+msgid "You can edit the page here:"
+msgstr "Хуудсыг энд засах боломжтой:"
+
+#, python-format
+msgid "The page \"%(title)s\" has been rejected"
+msgstr "\"%(title)s\" хуудсыг нийтлэхээс татгалзлаа."
+
+#, python-format
+msgid "The page \"%(page)s\" has been submitted for moderation by %(editor)s."
+msgstr " \"%(page)s\" хуудсыг хянуулахаар %(editor)s илгээсэн байна."
+
+msgid "You can preview the page here:"
+msgstr "Хуудсыг энд урдчилж харах боломжтой:"
+
+#, python-format
+msgid "The page \"%(page)s\" has been submitted for moderation"
+msgstr " \"%(page)s\" хуудсыг хянуулахаар илгээсэн байна."
+
+msgid "Page privacy"
+msgstr "Хуудасны нууцлал"
+
+msgid "This page has been made private by a parent page."
+msgstr ""
+"Эцэг хуудас нь \"хувийн\" тохиргоотой болсон тул энэ хуудас \"хувийн\" "
+"тохиргоотой болсон."
+
+msgid "Publishing…"
+msgstr "Нийтэлж байна..."
+
+msgid "Saving…"
+msgstr "Хадгалж байна..."
+
+msgid "Replace current draft"
+msgstr "Одоогийн нооргийг дарж хуулах"
+
+msgid "Save draft"
+msgstr "Ноорог хадгалах"
+
+#, python-format
+msgid "Create a page in %(title)s"
+msgstr "%(title)s-д хуудас үүсгэх"
+
+msgid "Create a page in"
+msgstr "хуудас үүсгэх"
+
+msgid "Choose which type of page you'd like to create."
+msgstr "Үүсгэх хуудасныхаа төрлийг сонгоно уу."
+
+#, python-format
+msgid "Pages using %(page_type)s"
+msgstr "%(page_type)s-г ашиглаж буй хуудсууд"
+
+msgid "No, don't delete"
+msgstr "Үгүй, устгахгүй"
+
+msgid "Move"
+msgstr "Зөөх"
+
+msgid "No, don't unpublish"
+msgstr "Үгүй"
+
+#, python-format
+msgid "Delete %(title)s"
+msgstr "%(title)s-г устгах"
+
+msgid "Are you sure you want to delete this page?"
+msgstr "Энэ хуудсыг үнэхээр устгах уу?"
+
+msgid "Yes, delete it"
+msgstr "Тийм, үүнийг устга"
+
+msgid "No, don't delete it"
+msgstr "Үгүй, устгахгүй"
+
+#, python-format
+msgid ""
+"Alternatively you can <a href=\"%(unpublish_url)s\">unpublish the page</a>. "
+"This removes the page from public view and you can edit or publish it again "
+"later."
+msgstr ""
+"Та <a href=\"%(unpublish_url)s\">нийтлэхгүй болгох</a> боломжтой. Ингэвэл "
+"тухайн хуудсанд бусад хүн хандах боломжгүй болох бөгөөд дараа нь засаж, "
+"нийтлэх боломжтой. "
+
+#, python-format
+msgid "Move %(title)s"
+msgstr "%(title)s-г зөөх"
+
+#, python-format
+msgid "Are you sure you want to move this page into '%(title)s'?"
+msgstr "Энэ хуудсыг үнэхээр '%(title)s'-руу зөөх үү?"
+
+#, python-format
+msgid ""
+"Are you sure you want to move this page and all of its children into "
+"'%(title)s'?"
+msgstr "Энэ хуудас болон дэд хуудсуудыг '%(title)s' -руу үнэхээр зөөх үү?"
+
+msgid "Yes, move this page"
+msgstr "Тийм, энэ хуудсыг зөө"
+
+msgid "Are you sure you want to unpublish this page?"
+msgstr "Энэ хуудсыг үнэхээр хандах боломжгүй болгох уу?"
+
+#, python-format
+msgid "Pages using %(page_class_verbose_name)s"
+msgstr "%(page_class_verbose_name)s-г ашиглаж буй хуудсууд"
+
+msgid "Pages using"
+msgstr "Ашиглаж буй хуудсууд"
+
+#, python-format
+msgid "Copy %(title)s"
+msgstr "%(title)s хуулах"
+
+msgid "Copy"
+msgstr "Хуулах"
+
+msgid "Copy this page"
+msgstr "Энэ хуудсыг хуулах"
+
+#, python-format
+msgid "New %(page_type)s"
+msgstr "Шинэ %(page_type)s"
+
+msgid "This page has unsaved changes."
+msgstr "Хуудсанд хадгалаагүй өөрчлөлт байна."
+
+#, python-format
+msgid "Editing %(page_type)s: %(title)s"
+msgstr "Засч байна %(page_type)s: %(title)s"
+
+msgid "Action"
+msgstr "Үйлдэл"
+
+msgid "Live version"
+msgstr "Нийтлэгдсэн хувилбар"
+
+msgid "Current draft"
+msgstr "Одоогийн ноорог"
+
+#, python-format
+msgid "Exploring %(title)s"
+msgstr "%(title)s-дыг үзэж байна"
+
+msgid "Drag"
+msgstr "Чирэх"
+
+msgid "Configure a site now."
+msgstr "Сайтаа тохируулна уу."
+
+msgid "No pages have been created at this location."
+msgstr "Энэ байрлалд ямар ч хуудас үүсээгүй байна."
+
+msgid "This page is locked to further editing"
+msgstr "Энэ хуудсыг дахин засахаас сэргийлж түгжсэн байна"
+
+#, python-format
+msgid "Explore child pages of '%(title)s'"
+msgstr "'%(title)s'-ын дэд хуудсуудыг харах"
+
+#, python-format
+msgid "Add a child page to '%(title)s'"
+msgstr "'%(title)s'-д дэд хуудас нэмэх"
+
+msgid "Sites menu"
+msgstr "Сайтын цэс"
+
+msgid "Pagination"
+msgstr "Хуудаслах"
+
+msgid "Previous"
+msgstr "Өмнөх"
+
+msgid "Next"
+msgstr "Дараагийнх"
+
+msgid "This page is protected from public view"
+msgstr "Энэ хуудас олон нийтэд харагдахгүй хамгаалагдсан"
+
+msgid "Disable ordering of child pages"
+msgstr "Дэд хуудсуудын эрэмбийг болиулах"
+
+msgid "Enable ordering of child pages"
+msgstr "Дэд хуудсуудыг эрэмбэлэх"
+
+msgid "Updated"
+msgstr "Шинэчлэгдсэн"
+
+msgid "History"
+msgstr "Түүх"
+
+msgid "Cancel scheduled publish"
+msgstr "Нийтлэлийн төлөвлөгөөг цуцлах"
+
+msgid "Page types"
+msgstr "Хуудасны төрөл"
+
+msgid "Enter a search term above"
+msgstr "Хайлтын утгаа дээд хэсэгт оруулна уу"
+
+msgid "No pages use"
+msgstr "Хуудас хэрэглээгүй"
+
+#, python-format
+msgid "Add %(label)s"
+msgstr "%(label)s нэмэх"
+
+msgid "Move up"
+msgstr "Дээш зөөх"
+
+msgid "Move down"
+msgstr "Доош зөөх"
+
+msgid "Download XLSX"
+msgstr "XLSX-р татах"
+
+msgid "Download CSV"
+msgstr "CSV татах"
+
+msgid "Locked"
+msgstr "Түгжигдсэн"
+
+msgid "No locked pages found."
+msgstr "Түгжигдсэн хуудас олдсонгүй."
+
+msgid "Edit this item"
+msgstr "Энэ зүйлийг засах"
+
+msgid "Page"
+msgstr "Хуудас"
+
+#, python-format
+msgid "Page %(page_num)s of %(total_pages)s."
+msgstr "Нийт %(total_pages)s -с %(page_num)s -р хуудас"
+
+msgid "Root"
+msgstr "Үндэс"
+
+#, python-format
+msgid "Unpublish %(title)s"
+msgstr "%(title)s нийтлэхийг болиулах"
+
+msgid "Yes, unpublish it"
+msgstr "Тийм, Нийтлэхгүй болго"
+
+msgid "Filter"
+msgstr "Шүүлтүүр"
+
+msgid "Unschedule"
+msgstr "Төлөвлөгөөг болиулах"
+
+msgid "Are you sure you want to unschedule this revision?"
+msgstr "Энэ хувилбарын төлөвлөгөөг болиулахдаа итгэлтэй байна уу?"
+
+msgid "Yes, unschedule"
+msgstr "Тийм, төлөвлөгөөг болиул."
+
+msgid "No, don't unschedule"
+msgstr "Үгүй, төлөвлөгөөг болиулахгүй"
+
+msgid "Other searches"
+msgstr "Бусад хайлтууд"
+
+msgid "Unlocked"
+msgstr "Түгжигдээгүй"
+
+msgid "Lock"
+msgstr "Түгжих"
+
+msgid "Add a child page"
+msgstr "Шинэ мэдээ нэмэх"
+
+msgid "New"
+msgstr "Шинэ"
+
+msgid "Compare with live version"
+msgstr "Нийтлэгдсэн хувилбартай харьцуулах"
+
+msgid "More"
+msgstr "Дэлгэрэнгүй"
+
+#, python-format
+msgid "%(time_period)s ago"
+msgstr "%(time_period)s-н өмнө"
+
+msgid "Log out"
+msgstr "Гарах"
+
+msgid "Password"
+msgstr "Нууц үг"
+
+msgid "You have been successfully logged out."
+msgstr "Та системээс гарлаа."
+
+msgid "Collections"
+msgstr "Цуглуулгууд"
+
+msgid "Add a collection"
+msgstr "Цуглуулга нэмэх"
+
+msgid "Add collection"
+msgstr "Цуглуулга нэмэх"
+
+#, python-brace-format
+msgid "Collection '{0}' created."
+msgstr "'{0}' цуглуулга үүслээ."
+
+#, python-brace-format
+msgid "Collection '{0}' updated."
+msgstr "'{0}' цуглуулга шинэчлэгдлээ."
+
+msgid "The collection could not be saved due to errors."
+msgstr "Алдаанаас шалтгаалж цуглуулга хадгалагдсангүй."
+
+msgid "Delete collection"
+msgstr "Цуглуулгыг устгах"
+
+#, python-brace-format
+msgid "Collection '{0}' deleted."
+msgstr "'{0}' цуглуулга устлаа."
+
+msgid "Are you sure you want to delete this collection?"
+msgstr "Энэ цуглуулгыг үнэхээр устгах уу?"
+
+msgid "Editing"
+msgstr "Засч байна"
+
+msgid "Earliest"
+msgstr "Хамгийн эхний"
+
+msgid "Latest"
+msgstr "Хамгийн сүүлийн"
+
+msgid "Dashboard"
+msgstr "Хянах самбар"
+
+#, python-brace-format
+msgid "Page '{0}' and {1} subpages copied."
+msgstr "Хуудас '{0}' болон {1} дэд хуудсууд хуулагдлаа."
+
+#, python-brace-format
+msgid "Page '{0}' copied."
+msgstr "'{0}' хуудас хуулагдлаа."
+
+msgid "View draft"
+msgstr "Ноорог харах"
+
+msgid "View live"
+msgstr "Нийтлэгдсэн хувилбарыг үзэх"
+
+#, python-brace-format
+msgid "Page '{0}' created."
+msgstr "'{0}' хуудас үүслээ."
+
+#, python-brace-format
+msgid "Page '{0}' created and published."
+msgstr "'{0}' хуудас үүсч, нийтлэгдлээ."
+
+#, python-brace-format
+msgid "Page '{0}' created and submitted for moderation."
+msgstr "'{0}' хуудас үүсч, хянуулахаар илгээгдлээ."
+
+msgid "The page could not be created due to validation errors"
+msgstr "Баталгаажуулалтын алдаанаас болж хуудас үүсгэж чадсангүй"
+
+#, python-brace-format
+msgid "Page '{0}' deleted."
+msgstr "'{0}' хуудас устлаа."
+
+msgid "This page is currently awaiting moderation"
+msgstr "Энэ хуудас хянуулахаар хүлээгдэж байна"
+
+#, python-brace-format
+msgid "Page '{0}' has been updated."
+msgstr "'{0}' хуудас шинэчлэгдлээ."
+
+#, python-brace-format
+msgid "Page '{0}' has been published."
+msgstr "'{0}' хуудас нийтлэгдлээ."
+
+#, python-brace-format
+msgid "Page '{0}' has been submitted for moderation."
+msgstr "'{0}' хуудас хянуулахаар илгээгдлээ."
+
+msgid "The page could not be saved as it is locked"
+msgstr "Түгжигдсэн хуудсыг засах хадгалах боломжгүй"
+
+msgid "The page could not be saved due to validation errors"
+msgstr "Баталгаажуулалтын алдаанаас болж хуудас хадгалагдсангүй"
+
+#, python-brace-format
+msgid "Page '{0}' is now unlocked."
+msgstr "'{0}' хуудасны түгжээ тайлагдлаа."
+
+#, python-brace-format
+msgid "The page '{0}' is not currently awaiting moderation."
+msgstr "'{0}' хуудас хянуулахаар хүлээгдэж байна."
+
+#, python-brace-format
+msgid "Page '{0}' published."
+msgstr "'{0}' хуудас нийтлэгдлээ."
+
+msgid "Failed to send approval notifications"
+msgstr "Зөвшөөрсөн мэдэгдэл илгээхэд алдаа гарлаа"
+
+#, python-brace-format
+msgid "Page '{0}' rejected for publication."
+msgstr "'{0}' хуудас нийтлэхээс татгалзагдлаа."
+
+msgid "Failed to send rejection notifications"
+msgstr "Татгалзсан мэдэгдэл илгээхэд алдаа гарлаа"
+
+#, python-brace-format
+msgid "Page '{0}' moved."
+msgstr "'{0}' хуудас зөөгдлөө."
+
+#, python-brace-format
+msgid "Page '{0}' unpublished."
+msgstr "'{0}' хуудсыг хаалаа."
+
+msgid "Pages"
+msgstr "Хуудсууд"
+
+msgid "Add child page"
+msgstr "Шинэ мэдээ нэмэх"
+
+#, python-format
+msgid "Move page '%(title)s'"
+msgstr "%(title)s хуудас руу шилжих"
+
+#, python-format
+msgid "Copy page '%(title)s'"
+msgstr "%(title)s хуудсыг хуулах"
+
+#, python-format
+msgid "Delete page '%(title)s'"
+msgstr "%(title)s хуудсыг устгах"
+
+#, python-format
+msgid "Unpublish page '%(title)s'"
+msgstr "%(title)s хуудсыг нийтлээгүй"
+
+msgid "Bulleted list"
+msgstr "Сумтай жагсаалт"
+
+msgid "Numbered list"
+msgstr "Дугаарласан жагсаалт"
+
+msgid "Blockquote"
+msgstr "Эшлэл"
+
+msgid "Bold"
+msgstr "Bold"
+
+msgid "Italic"
+msgstr "Italic"
+
+msgid "Link"
+msgstr "Холбоос"
+
+msgid "Code"
+msgstr "Код"
+
+msgid "Choose an item"
+msgstr "Сонгох"
+
+msgid "Choose another item"
+msgstr "Өөр зүйл сонгох"
+
+msgid "Clear choice"
+msgstr "Сонголтыг цэвэрлэх"
+
+msgid "Choose another page"
+msgstr "Өөр хуудас сонгох"

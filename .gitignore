@@ -1,0 +1,12 @@
+# Serverless directories
+.serverless
+
+# IDE / Editor
+.idea
+.editorconfig
+
+# Service worker
+sw.*
+
+# Mac OSX
+.DS_Store

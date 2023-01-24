@@ -1,0 +1,13 @@
+.DS_Store
+*.pyc
+*.log
+*.swp
+*.retry
+.env
+*~
+/logs
+/data
+.~*
+common/CACHE
+__pycache__
+!.gitignore

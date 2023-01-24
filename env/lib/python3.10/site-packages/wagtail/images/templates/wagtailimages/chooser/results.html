@@ -1,0 +1,32 @@
+{% extends "wagtailadmin/generic/chooser/results.html" %}
+{% load i18n wagtailimages_tags wagtailadmin_tags %}
+
+{% block listing_title %}<h2>{% trans "Latest images" %}</h2>{% endblock %}
+
+{% block results_listing %}
+    <ul class="listing horiz images chooser">
+        {% for image in results %}
+            <li>
+                <a data-chooser-modal-choice class="image-choice" title="{% if collections %}{{ image.collection.name }} » {% endif %}{{ image.title }}" href="{% if will_select_format %}{% url 'wagtailimages_chooser:select_format' image.id %}{% else %}{% url 'wagtailimages_chooser:chosen' image.id %}{% endif %}">
+                    <div class="image">{% image image max-165x165 class="show-transparency" %}</div>
+                    <h3>{{ image.title|ellipsistrim:60 }}</h3>
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
+
+{% block no_items_message %}
+    <p>
+        {% if is_filtering_by_collection %}
+            {% trans "You haven't uploaded any images in this collection." %}
+        {% else %}
+            {% trans "You haven't uploaded any images." %}
+        {% endif %}
+        {% if can_create %}
+            {% blocktrans trimmed %}
+                Why not <a class="upload-one-now" href="#tab-upload" data-tab-trigger>upload one now</a>?
+            {% endblocktrans %}
+        {% endif %}
+    </p>
+{% endblock %}

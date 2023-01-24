@@ -1,0 +1,26 @@
+version: "3"
+services:
+
+  backend:
+    build: ./backend/
+    volumes:
+      - ./backend:/backend
+    ports:
+      - "7999:7999"
+    command: ["./docker-entrypoint.sh"]
+
+  frontend:
+    build: ./frontend/
+    volumes:
+      - ./frontend:/usr/src/nuxt-app
+      - node_modules:/usr/src/nuxt-app/node_modules/
+    ports:
+      - "8000:8000"
+    command: [sh, -c, "npm install && npm run dev"]
+    environment:
+      - URL_BACKEND_SERVER=http://backend:7999
+    depends_on:
+      - backend
+
+volumes:
+  node_modules:
