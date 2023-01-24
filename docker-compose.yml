@@ -4,7 +4,8 @@ services:
   backend:
     build: ./backend/
     volumes:
-      - ./backend:/backend
+      # This mounts local ./backend for applying changes in Wagtail!
+      - ./backend:/app
     ports:
       - "7999:7999"
     command: ["./docker-entrypoint.sh"]
@@ -12,8 +13,8 @@ services:
   frontend:
     build: ./frontend/
     volumes:
+      # This mounts local ./frontend for applying changes in NuxtJS!
       - ./frontend:/usr/src/nuxt-app
-      - node_modules:/usr/src/nuxt-app/node_modules/
     ports:
       - "8000:8000"
     command: [sh, -c, "npm install && npm run dev"]
@@ -22,5 +23,5 @@ services:
     depends_on:
       - backend
 
-volumes:
-  node_modules:
+#volumes:
+# node_modules:

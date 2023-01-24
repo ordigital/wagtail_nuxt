@@ -29,6 +29,8 @@ INSTALLED_APPS = [
     "app",
     'rest_framework',
     'wagtail.api.v2',
+    "graphene_django",
+    
     "wagtail.contrib.forms",
     "wagtail.contrib.redirects",
     "wagtail.embeds",
@@ -48,8 +50,14 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+
+
     
 ]
+
+GRAPHENE = {
+    "SCHEMA": "app.schema.schema"
+}
 
 MIDDLEWARE = [
     "django.contrib.sessions.middleware.SessionMiddleware",

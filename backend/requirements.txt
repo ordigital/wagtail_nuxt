@@ -1,2 +1,6 @@
 Django>=4.1,<4.2
 wagtail>=4.1,<4.2
+gunicorn>=20.1.0
+
+graphene-django
+django-cors-headers
