@@ -39,7 +39,7 @@ $ ./manage.py createsuperuser
 ```
 
 ## 5. Add some articles
-Open **http://localhost:7999/admin** and add some test pages.
+Open **http://localhost:7999/admin** and add some articles as subpages of Home with `News Page` model.
 
 ## 6. Test fetching in frontend
 Open **http://localhost:8000** again, click `re-fetch` button (or refresh page) and see if page titles are visible in sidebar menu. After clicking on title, full content should appear in main window.
