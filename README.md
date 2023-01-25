@@ -1,4 +1,4 @@
-# **Wagtail 4** + **NuxtJS 3** + **Graphene 3** + **Vuetify 3**
+# Dockerized **Wagtail 4** + **NuxtJS 3** + **Graphene 3** + **Vuetify 3**
 
 
 ## 1. Clone repository
