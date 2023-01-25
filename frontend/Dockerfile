@@ -11,9 +11,14 @@ RUN apk update && apk upgrade
 # copy the app, note .dockerignore
 COPY --chown=node:node . /usr/src/nuxt-app/
 
+# fix import vuetify sass error
+RUN mkdir -p /usr/src/nuxt-app/.nuxt/
+RUN touch /usr/src/nuxt-app/.nuxt/css.mjs
+
 # set permissions for node
 RUN chmod -R +w /usr/src/nuxt-app/node_modules/
 RUN chown -R node:node /usr/src/nuxt-app/node_modules/
+
 
 #RUN npm install
 
@@ -33,6 +38,8 @@ ENV NUXT_PORT=8000
 
 # set node user
 USER node
+
+
 
 # start the app
 #CMD [ "npm", "run", "dev" ]

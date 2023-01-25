@@ -17,6 +17,7 @@ services:
       - ./frontend:/usr/src/nuxt-app
     ports:
       - "8000:8000"
+      - "24678:24678"
     command: [sh, -c, "npm install && npm run dev"]
     environment:
       - URL_BACKEND_SERVER=http://backend:7999
