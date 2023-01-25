@@ -29,7 +29,7 @@ ENV NUXT_HOST=0.0.0.0
 # set app port
 ENV NUXT_PORT=8000
 # workaround for errors
-ENV NODE_OPTIONS=--openssl-legacy-provider
+#ENV NODE_OPTIONS=--openssl-legacy-provider
 
 # set node user
 USER node

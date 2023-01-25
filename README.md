@@ -1,6 +1,4 @@
-# Backend: **Wagtail** 4.1.1 
-# Frontend: **NuxtJS** 2.15.8 
-# Endpoints: **graphene-django** 3.0.0
+# **Wagtail 4** + **NuxtJS 3** **Graphene 3**
 
 ## Download repository:
 ```bash
