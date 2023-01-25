@@ -12,12 +12,12 @@ RUN apk update && apk upgrade
 COPY --chown=node:node . /usr/src/nuxt-app/
 
 # fix import vuetify sass error
-RUN mkdir -p /usr/src/nuxt-app/.nuxt/
-RUN touch /usr/src/nuxt-app/.nuxt/css.mjs
+# RUN mkdir -p /usr/src/nuxt-app/.nuxt/
+# RUN touch /usr/src/nuxt-app/.nuxt/css.mjs
 
 # set permissions for node
-RUN chmod -R +w /usr/src/nuxt-app/node_modules/
-RUN chown -R node:node /usr/src/nuxt-app/node_modules/
+# RUN chmod -R +w /usr/src/nuxt-app/node_modules/
+# RUN chown -R node:node /usr/src/nuxt-app/node_modules/
 
 
 #RUN npm install
