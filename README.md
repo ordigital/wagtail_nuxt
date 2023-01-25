@@ -15,6 +15,7 @@ $ docker-compose up
 ```
 or use scripts:
 ```bash
+$ chmod +x ./build && chmod +x ./run
 $ ./build
 $ ./run
 ```
