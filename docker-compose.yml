@@ -22,6 +22,3 @@ services:
       - URL_BACKEND_SERVER=http://backend:7999
     depends_on:
       - backend
-
-#volumes:
-# node_modules:

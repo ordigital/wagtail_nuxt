@@ -5,11 +5,23 @@ import graphene
 from graphene_django import DjangoObjectType
 from app.models import NewsPage
 
+# Example query for News:
+#
+#  query articles { 
+#   articles {
+#       id 
+#       title 
+#       date 
+#       intro 
+#       body }
+#  }
+
 
 class ArticleNode(DjangoObjectType):
     class Meta:
         model = NewsPage
         only_fields = ['id', 'title', 'date', 'intro', 'body']
+
 
 
 class Query(graphene.ObjectType):

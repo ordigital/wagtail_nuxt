@@ -11,6 +11,7 @@ RUN apk update && apk upgrade
 # copy the app, note .dockerignore
 COPY --chown=node:node . /usr/src/nuxt-app/
 
+# set permissions for node
 RUN chmod -R +w /usr/src/nuxt-app/node_modules/
 RUN chown -R node:node /usr/src/nuxt-app/node_modules/
 
@@ -27,9 +28,10 @@ EXPOSE 8000
 ENV NUXT_HOST=0.0.0.0
 # set app port
 ENV NUXT_PORT=8000
-
+# workaround for errors
 ENV NODE_OPTIONS=--openssl-legacy-provider
 
+# set node user
 USER node
 
 # start the app

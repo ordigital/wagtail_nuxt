@@ -1,12 +1,12 @@
 from django.db import models
 from wagtail.api import APIField
 
-# Create your models here.
-
 from wagtail.models import Page
 from wagtail.fields import RichTextField
 from wagtail.admin.panels import FieldPanel
 
+# News model for testing purposes
+# See schema.py for GraphQL endpoints
 class NewsPage(Page):
     date = models.DateField("Post date")
     intro = models.CharField(max_length=250)

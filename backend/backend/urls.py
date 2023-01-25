@@ -15,6 +15,7 @@ from search import views as search_views
 from graphene_django.views import GraphQLView
 from django.views.decorators.csrf import csrf_exempt
 
+# Default url patterns
 urlpatterns = [
     path("django-admin/", admin.site.urls),
     path("admin/", include(wagtailadmin_urls)),
@@ -32,20 +33,21 @@ if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 urlpatterns = urlpatterns + [
-    # For anything not caught by a more specific rule above, hand over to
-    # Wagtail's page serving mechanism. This should be the last pattern in
-    # the list:
 
+    # GraphQL API
     re_path(r'^api/graphql', csrf_exempt(GraphQLView.as_view())),
     re_path(r'^api/graphiql', csrf_exempt(GraphQLView.as_view(graphiql=True, pretty=True))),
 
-    #path("graphql", GraphQLView.as_view(graphiql=True)),
+    # API v2
     path('api/v2/', api_router.urls),
+
+    # To read urls.py from subdir: 
+    # path("pages/", include(wagtail_urls)),
+
+    # General paths
     re_path(r'^', include(wagtail_urls)),
     path("", include(wagtail_urls)),
-    # Alternatively, if you want Wagtail pages to be served from a subpath
-    # of your site, rather than the site root:
-    #    path("pages/", include(wagtail_urls)),
+
 ]
 
 

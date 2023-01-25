@@ -1,5 +1,6 @@
-# Backend: **Wagtail** 4.1.1 + Frontend: **NuxtJS** 2.15.8 + API: **graphene-django** 3.0.0
-
+# Backend: **Wagtail** 4.1.1 
+# Frontend: **NuxtJS** 2.15.8 
+# Endpoints: **graphene-django** 3.0.0
 
 ## Download repository:
 ```bash
@@ -14,6 +15,7 @@ $ docker-compose build
 $ docker-compose up
 ```
 
+Generated images would need around 2GB.
 You can access backend Docker image to create superuser:
 ```bash
 $ docker ps # find ID of backend image
