@@ -56,25 +56,32 @@ You can also install [Vue.js devtools](https://chrome.google.com/webstore/detail
 
 # **Deploying for production**:
 
-**For now deploying Wagtail through Gunicorn and Nginx in Docker is done. Soon I'll add Nuxt frontend so for now you won't find it here.**
-
 ## 1. Set `.env` file and test settings
-Rename `sample.env` to `.env`, edit it and change settings you want including `SECRET_KEY`:
+Go to `backend/` and rename `sample.env` to `.env`, edit it and change settings you want including `SECRET_KEY`:
 ```bash
 $ mv ./sample.env ./.env
 $ nano ./.env # or vim, mcedit, code etc.
 ```
 Do not set up SSL redirect until you test that everything will work without it.
-## 2. Run container for production
+
+## 2. Generate static files for NuxtJS
+Config file `nuxt.config.ts` has setting for `httpEndpoint` both for developement (API on port 7999) and production (API on port 8000).
 ```bash
-$ docker-compose -f docker-compose.prod.yml up --build --force-recreate
+$ chmod +x ./nuxt
+$ ./nuxt
 ```
-or use ready script:
+
+## 2. Run containers for production
 ```bash
-$ chmod +x ./dev
+$ chmod +x ./prod
 $ ./prod
 ```
 
 ## 3. Test if Nginx proxy responds
-Go to http://localhost:8000 then try http://localhost:8000/admin and check if css styles and images are loading.
+- **http://localhost:8000** should point to NuxtJS static frontend
+- **http://localhost:8000/static** should point to Wagtail static folder
+- **http://localhost:8000/admin** should point to Wagtail admin panel
+- **http://localhost:8000/django-admin** should point to Django admin panel
 
+## 4. Do whatever you like
+Now you can save container and run it on a production server with port forwarding.

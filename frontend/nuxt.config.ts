@@ -34,6 +34,24 @@ export default({
         define: {
           'process.env.DEBUG': false,
         },
+    },
+
+    // THIS IS FOR GENERATING STATIC PAGE!!!
+    generate: {
+        apollo: {
+            clients: {
+                default: {
+                    httpEndpoint: 'http://localhost:8000/api/graphql', // remember to change later
+                    websocketsOnly: false,
+                    connectToDevTools: true,
+                    tokenStorage: 'cookie',
+                    authType: 'Bearer',
+                    authHeader: 'Authorization',
+                    tokenName: "wagtail-token",
+                }
+            },
+        },
     }
+
 
 })

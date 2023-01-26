@@ -13,14 +13,23 @@ services:
       - 7999
     command: ["./docker-entrypoint.prod.sh"]
 
+  # # Only Generate static files and go away!
+  # nuxt:
+  #   build: ./frontend/
+  #   volumes:
+  #     - ./frontend:/usr/src/nuxt-app
+  #   command: [sh, -c, "npm install && npm run generate"]
+
   # Nginx proxying wagtail wsgi
   nginx:
     build: ./nginx
     volumes:
-      # nginx will have access to static files
+      # nginx will have access to all static files
       - ./backend/static:/static
+      - ./frontend/.output/public:/public
     ports:
       - 8000:8000
     depends_on:
+      #- nuxt
       - web
 
