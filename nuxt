@@ -1,2 +1,4 @@
 #!/bin/bash
+mkdir -p frontend/.output/public
+chmod 777 frontend/.output/public
 docker-compose -f docker-compose.nuxt.yml up --build --force-recreate

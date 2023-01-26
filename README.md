@@ -12,7 +12,6 @@ $ cd wagtail_nuxtjs
 ## 2. Build Docker images
 Execute command below to build Docker images with access to local `frontend` and `backend` folders (see `docker-compose.yml`). This way live changes in code would be possible (needs at least 2GB free space):
 ```bash
-$ chmod +x ./dev
 $ ./dev
 ```
 ## 3. Open frontend
@@ -28,9 +27,8 @@ If there were no errors you should be able to open **http://localhost:8000** and
 ## 4. Create Wagtail superuser 
 You can access backend Docker image to create superuser using `manage.py`:
 ```bash
-$ docker ps # find ID of backend image
-$ docker exec -it BACKEND_IMAGE_ID bash
-$ ./manage.py createsuperuser 
+$ docker exec -it `docker ps|grep backend|awk '{print $1}'` bash
+$ ./manage.py createsuperuser
 ```
 
 ## 5. Add some articles
@@ -62,14 +60,13 @@ Do not set up SSL redirect until you test that everything will work without it.
 
 ## 2. Generate static files for NuxtJS
 Config file `nuxt.config.ts` has setting for `httpEndpoint` both for developement (API on port 7999) and production (API on port 8000).
+Run this command to generate new NuxtJS static files and exit.
 ```bash
-$ chmod +x ./nuxt
 $ ./nuxt
 ```
 
 ## 2. Run containers for production
 ```bash
-$ chmod +x ./prod
 $ ./prod
 ```
 

@@ -18,9 +18,7 @@ COPY --chown=node:node . /usr/src/nuxt-app/
 # set permissions for node
 # RUN chmod -R +w /usr/src/nuxt-app/node_modules/
 # RUN chown -R node:node /usr/src/nuxt-app/node_modules/
-
-
-#RUN npm install
+# RUN npm install
 
 # build necessary, even if no static files are needed,
 # since it builds the server as well
@@ -38,8 +36,6 @@ ENV NUXT_PORT=8000
 
 # set node user
 USER node
-
-
 
 # start the app
 #CMD [ "npm", "run", "dev" ]
