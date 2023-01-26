@@ -10,11 +10,7 @@ $ cd wagtail_nuxtjs
 ```
 
 ## 2. Build Docker images
-Execute commands below to build Docker images with access to local `frontend` and `backend` folders (see `docker-compose.yml`). This way live changes in code would be possible (needs at least 2GB free space):
-```bash
-$ docker-compose up --build --force-recreate
-```
-or use ready script:
+Execute command below to build Docker images with access to local `frontend` and `backend` folders (see `docker-compose.yml`). This way live changes in code would be possible (needs at least 2GB free space):
 ```bash
 $ chmod +x ./dev
 $ ./dev
