@@ -1,0 +1,26 @@
+version: "3.7"
+services:
+
+  # Wagtail run by gunicorn
+  web:
+    build: ./backend/
+    volumes:
+      # This mounts local ./backend so we'll have access to files
+      # for super easy file updates from git
+      - ./backend:/app
+    # this opens 7999 port only for nginx
+    expose:
+      - 7999
+    command: ["./docker-entrypoint.prod.sh"]
+
+  # Nginx proxying wagtail wsgi
+  nginx:
+    build: ./nginx
+    volumes:
+      # nginx will have access to static files
+      - ./backend/static:/static
+    ports:
+      - 8000:8000
+    depends_on:
+      - web
+

@@ -12,14 +12,7 @@ $ cd wagtail_nuxtjs
 ## 2. Build Docker images
 Execute commands below to build Docker images with access to local `frontend` and `backend` folders (see `docker-compose.yml`). This way live changes in code would be possible (needs at least 2GB free space):
 ```bash
-$ docker-compose build
-$ docker-compose up
-```
-or use scripts:
-```bash
-$ chmod +x ./build && chmod +x ./run
-$ ./build
-$ ./run
+$ docker-compose up --build --force-recreate
 ```
 
 ## 3. Open frontend
@@ -55,29 +48,22 @@ $ ./manage.py shell -c "from django.core.management.utils import get_random_secr
 ```
 You can also install [Vue.js devtools](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd/related) and [Apollo Client Tools](https://chrome.google.com/webstore/detail/apollo-client-devtools/jdkknkkbebbapilgoeccciglkfbmbnfm) for Chrome/Brave to make your work easier.
 
-## 8. Deploying for production:
-*[ soon… ]*
+# Deploying for production:
 
-<!-- ## Run Wagtail without Docker
+**For now deploying Wagtail through Gunicorn and Nginx in Docker is done. Soon I'll add Nuxt frontend so for now you won't find it here.**
+
+## 1. Set `.env` file and test settings
+Rename `sample.env` to `.env`, edit it and change settings you want including `SECRET_KEY`:
 ```bash
-$ python -m env
-$ source env/bin/activate
-$ pip install -r ./requirements.txt
-$ cd backend
-$ ./manage.py migrate  # Update database
-$ ./manage.py createsuperuser # Create admin user
-$ ./manage.py runserver # Run Wigtail web server
+$ mv ./sample.env ./.env
+$ nano ./.env # or vim, mcedit, code etc.
 ```
-## Run NuxtJS without Docker
-First pdate npm version:
+Do not set up SSL redirect until you test that everything will work without it.
+## 2. Run container for production
 ```bash
-$ sudo npm cache clean -f # Prepare npm
-$ sudo npm update npm -g # Update npm
-$ sudo n stable # Install stable version of npm
+$ docker-compose -f docker-compose.prod.yml up --build --force-recreate
 ```
-Now install dependencies and serve frontend:
-```bash
-$ cd frontend
-$ npm install
-$ npm run dev # use "npm run generate" to generate static files
-``` -->
+
+## 3. Test if Nginx proxy responds
+Go to http://localhost:8000 then try http://localhost:8000/admin and check if css styles and images are loading.
+
