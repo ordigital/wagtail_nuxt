@@ -59,8 +59,6 @@ $ nano ./.env # or vim, mcedit, code etc.
 Do not set up SSL redirect until you test that everything will work without it.
 
 ## 2. Generate static files for NuxtJS
-Config file `nuxt.config.ts` has setting for `httpEndpoint` both for developement (API on port 7999) and production (API on port 8000).
-Run this command to generate new NuxtJS static files and exit.
 ```bash
 $ ./nuxt
 ```

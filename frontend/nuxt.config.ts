@@ -1,5 +1,7 @@
 export default({
         
+
+
     modules: ['@nuxtjs/apollo'],
     
     css: [
@@ -19,7 +21,7 @@ export default({
     apollo: {
         clients: {
             default: {
-                httpEndpoint: 'http://localhost:7999/api/graphql', // remember to change later
+                httpEndpoint: process.env.API_ENDPOINT || 'http://localhost:7999/api/graphql', // remember to change later
                 websocketsOnly: false,
                 connectToDevTools: true,
                 tokenStorage: 'cookie',
@@ -36,22 +38,7 @@ export default({
         },
     },
 
-    // THIS IS FOR GENERATING STATIC PAGE!!!
-    generate: {
-        apollo: {
-            clients: {
-                default: {
-                    httpEndpoint: 'http://localhost:8000/api/graphql', // remember to change later
-                    websocketsOnly: false,
-                    connectToDevTools: true,
-                    tokenStorage: 'cookie',
-                    authType: 'Bearer',
-                    authHeader: 'Authorization',
-                    tokenName: "wagtail-token",
-                }
-            },
-        },
-    }
+
 
 
 })
