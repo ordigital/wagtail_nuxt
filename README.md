@@ -14,7 +14,9 @@ Execute commands below to build Docker images with access to local `frontend` an
 ```bash
 $ docker-compose up --build --force-recreate
 ```
-
+or use ready script:
+$ chmod +x ./dev
+$ ./dev
 ## 3. Open frontend
 If there were no errors you should be able to open **http://localhost:8000** and see example NuxtJS page made using Vuetify with GraphQL for fetching test.
 
@@ -63,6 +65,9 @@ Do not set up SSL redirect until you test that everything will work without it.
 ```bash
 $ docker-compose -f docker-compose.prod.yml up --build --force-recreate
 ```
+or use ready script:
+$ chmod +x ./dev
+$ ./prod
 
 ## 3. Test if Nginx proxy responds
 Go to http://localhost:8000 then try http://localhost:8000/admin and check if css styles and images are loading.
