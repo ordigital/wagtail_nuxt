@@ -1,7 +1,7 @@
-![wagtail_nuxt banner](https://github.com/ordigital/wagtail_nuxt/blob/main/wagtail_nuxt.jpg?raw=true)
-
 # Dockerized **Wagtail 4** + **NuxtJS 3** + **Graphene 3** + **Vuetify 3**
-
+![wagtail_nuxt banner](https://github.com/ordigital/wagtail_nuxt/blob/main/wagtail_nuxt.jpg?raw=true)
+---
+# **For developement:**
 
 ## 1. Clone repository
 ```bash
@@ -52,7 +52,9 @@ $ ./manage.py shell -c "from django.core.management.utils import get_random_secr
 ```
 You can also install [Vue.js devtools](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd/related) and [Apollo Client Tools](https://chrome.google.com/webstore/detail/apollo-client-devtools/jdkknkkbebbapilgoeccciglkfbmbnfm) for Chrome/Brave to make your work easier.
 
-# Deploying for production:
+---
+
+# **Deploying for production**:
 
 **For now deploying Wagtail through Gunicorn and Nginx in Docker is done. Soon I'll add Nuxt frontend so for now you won't find it here.**
 
