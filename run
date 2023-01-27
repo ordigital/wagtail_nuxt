@@ -42,6 +42,26 @@ wag() {
   docker exec -it `docker ps|grep backend|awk '{print $1}'` bash || echo -e "${PURPLE}Is container running?${WHITE}"
 }
 
+save() {
+    mkdir -p ./export
+  echo -e "\n${GREEN}--[ Saving docker image… ]--${WHITE}\n"
+  docker save -o ./export/wagtail_gunicorn.tar wagtail_nuxt_web || echo -e "${PURPLE}Something went wrong!${WHITE}"
+  echo -e "\n${GREEN}--[ Saving static, public files and nginx example config… ]--${WHITE}\n"
+  cp ./nginx/nginx.conf ./export
+  cp -R ./backend/static ./export
+  cp -R ./frontend/.output/public ./export
+  echo -e "\n${GREEN}--[ Saving wagtail_nuxt_production.tar.gz…]--${WHITE}\n"
+  tar czf ./wagtail_nuxt_production.tar.gz export
+  echo -e "\n${GREEN}--[ Cleaning up…]--${WHITE}\n"
+  rm -R ./export
+  echo -e "\n${GREEN}--[ DONE ]--${WHITE}\n"
+  echo -e "Use ${YELLOW}docker load -i ./wagtail_gunicorn.tar${WHITE} to import docker image."
+  echo -e "Create vhost config based on ${YELLOW}nginx.conf${WHITE}."
+  echo -e "Copy ${YELLOW}/static${WHITE} and ${YELLOW}/public${WHITE} to where nginx proxy would get them from."
+  echo -e "Use ${YELLOW}docker run${WHITE} with required parameters to start docker image with gunicorn."
+  echo -e "Remember you can bind folders with source files to docker so you do not need to regenerate image anymore!"
+}
+
 # How to use
 usage() {
   echo -e "\n${GREEN}Usage: ${WHITE}run ${RED}[${YELLOW}dev${RED}/${GREEN}gen${RED}/${PURPLE}prod${RED}]${WHITE}\n"
@@ -53,6 +73,7 @@ case $1 in
   "gen") gen ;;
   "prod") prod ;;
   "wag") wag ;;
+  "save") save ;;
   *) usage ;;
 esac
 

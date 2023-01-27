@@ -49,4 +49,14 @@ $ ./run prod
 ## 2. Customize settings
 If everything went well, stop container and edit `backend/backend/.env` to set important variables. Now you can build again and use images for production server.
 
-Enjoy! :)
+## 3. Export files
+Run command below to create `wagtail_nuxt_production.tar.gz` file with everything you need to deploy on server:
+- Wagtail with Gunicorn Docker image (port 7999)
+- Wagtail static files directory
+- Nginx public static files 
+- Nginx sample proxy file.
+```bash
+$ ./run save
+```
+
+# Enjoy! :)
