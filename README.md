@@ -24,8 +24,8 @@ $ ./run wag
 Open Wagtail admin panel to add some subpages to `Home` with `News Page` type.
 Then open frontend to test if GraphQL api is fetching data.
 
-- Backend admin panel: http://localhost:7999/admin *(remember to add some NewsPages to test api!)*
-- Simple frontend with GraphQL test: http://localhost:8000
+- **Backend admin panel: http://localhost:7999/admin** *(remember to add some NewsPages to test api!)*
+- **Simple frontend with GraphQL test: http://localhost:8000**
 - GraphQL console for testing: http://localhost:7999/api/graphiql
 - GraphQL api: http://localhost:7999/api/graphql *(try `/api/graphql/?query articles { articles {title intro}}`)*
 - Wagtail api: http://localhost:7999/api/v2/ *(try `/api/v2/pages` to test)*
