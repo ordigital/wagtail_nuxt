@@ -58,9 +58,20 @@ save() {
   echo -e "Use ${YELLOW}docker load -i ./wagtail_gunicorn.tar${WHITE} to import docker image."
   echo -e "Create vhost config based on ${YELLOW}nginx.conf${WHITE}."
   echo -e "Copy ${YELLOW}/static${WHITE} and ${YELLOW}/public${WHITE} to where nginx proxy would get them from."
-  echo -e "Use ${YELLOW}docker run${WHITE} with required parameters to start docker image with gunicorn."
-  echo -e "Remember you can bind folders with source files to docker so you do not need to regenerate image anymore!"
+  echo -e "Use ${YELLOW}docker run${WHITE} with exec command ${YELLOW}./docker-entrypoint.prod.sh${WHITE} to start container from image.\n"
+  echo -e "${PURPLE}Remember you must bind some source files because db.sqlite3 and .env is not in docker image!${WHITE}\n"
+  echo -e "Example:\n"
+  echo -e "${YELLOW}docker run -d \\n\
+     --name wagtail \\n\
+     --mount type=bind,source=/LOCAL/db.sqlite3,target=/app/db.sqlite3 \\n\
+     --mount type=bind,source=/LOCAL/.env /app/backend/.env \\n\
+     --restart=unless-stopped \\n\
+     -p 7999:7999 \\n\
+     wagtail_nuxt_web \\n\
+     ./docker-entrypoint.prod.sh${WHITE}"
 }
+
+
 
 # How to use
 usage() {

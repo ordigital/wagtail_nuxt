@@ -59,4 +59,25 @@ Run command below to create `wagtail_nuxt_production.tar.gz` file with everythin
 $ ./run save
 ```
 
+## 4. Deploy on server
+
+- Use `docker load -i ./wagtail_gunicorn.tar` to import docker image.
+- Create vhost config based on `nginx.conf`.
+- Copy `/static` and `/public` to where nginx proxy would get them from.
+- Use `docker run` with exec command `./docker-entrypoint.prod.sh` to start container from image.
+
+### **Remember you must bind some source files because db.sqlite3 and .env is not in docker image!!!** ###
+
+Example:
+```bash
+docker run -d \
+     --name wagtail  \
+     --mount type=bind,source=/LOCAL/db.sqlite3,target=/app/db.sqlite3 \
+     --mount type=bind,source=/LOCAL/.env /app/backend/.env \
+     --restart=unless-stopped \
+     -p 7999:7999 \
+     wagtail_nuxt_web \
+     ./docker-entrypoint.prod.sh\
+```
+
 # Enjoy! :)

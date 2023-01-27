@@ -73,7 +73,12 @@ MIDDLEWARE = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:8000", # whitelist localhost for axios/apollo requests
+    "http://localhost:8000",
+      # whitelist localhost for axios/apollo requests
+]
+
+CSRF_TRUSTED_ORIGINS = [
+    'http://localhost:8000'
 ]
 
 ROOT_URLCONF = "backend.urls"
