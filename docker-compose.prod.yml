@@ -8,9 +8,9 @@ services:
       # This mounts local ./backend so we'll have access to files
       # for super easy file updates from git
       - ./backend:/app
-    # this opens 7999 port only for nginx
-    expose:
-      - 7999
+    # this opens 7999
+    ports:
+      - 7999:7999
     command: ["./docker-entrypoint.prod.sh"]
 
   # # Only Generate static files and go away!
