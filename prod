@@ -1,6 +1,0 @@
-#!/bin/bash
-
-filename="backend/backend/.env"
-test -f $filename || cp backend/backend/sample.env $filename
-
-docker-compose -f docker-compose.prod.yml up --build --force-recreate

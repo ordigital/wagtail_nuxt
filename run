@@ -1,0 +1,59 @@
+#!/bin/bash
+
+COLOR="\e["
+RED="${COLOR}31m"
+GREEN="${COLOR}32m"
+PURPLE="${COLOR}35m"
+BLUE="${COLOR}34m"
+WHITE="${COLOR}m"
+YELLOW="${COLOR}36m"
+GRAY="${COLOR}37m"
+
+# Run dev servers
+dev() {
+  echo -e "\n${YELLOW}--[ Building developement images… ]--${WHITE}\n"
+  docker-compose up --remove-orphans --build --force-recreate
+}
+
+# Generate NuxtJS static files
+gen() {
+  echo -e "\n${GREEN}--[ Generating nuxt static files… ]--${WHITE}\n"
+  mkdir -p frontend/.output/public
+  chmod 777 frontend/.output/public
+  docker-compose -f docker-compose.nuxt.yml up --remove-orphans --build --force-recreate
+}
+
+# Run production servers
+prod() {
+  gen
+  echo -e "\n${GREEN}--[ Looking for .env file… ]--${WHITE}\n"
+  env_dir="backend/backend"
+  env_file=".env"
+  env_sample="sample.env"
+  test -f ${env_dir}/${env_file} || cp ${env_dir}/{$env_sample} ${env_file} && echo "Using .env file created from sample.env!\n"
+  echo -e "\n${GREEN}--[ Building production images… ]--${WHITE}\n"
+  docker-compose -f docker-compose.prod.yml up --remove-orphans --build --force-recreate
+}
+
+wag() {
+  echo -e "\n${GREEN}--[ Logging in to Wagtail docker image… ]--${WHITE}\n"
+  echo -e "To create superuser:\n${YELLOW}./manage.py createsuperuser${WHITE}"
+  echo -e "To generate new SECRET_KEY:\n${YELLOW}./manage.py shell -c 'from django.core.management.utils import get_random_secret_key; print(get_random_secret_key())'${WHITE}\n"
+  docker exec -it `docker ps|grep backend|awk '{print $1}'` bash || echo -e "${PURPLE}Is container running?${WHITE}"
+}
+
+# How to use
+usage() {
+  echo -e "\n${GREEN}Usage: ${WHITE}run ${RED}[${YELLOW}dev${RED}/${GREEN}gen${RED}/${PURPLE}prod${RED}]${WHITE}\n"
+  echo -e "${YELLOW}dev${GRAY} = serve for developement;\n${GREEN}gen${GRAY} = generate nuxt static files;\n${PURPLE}prod${GRAY} = serve for production (includes ${GREEN}gen${GRAY})${WHITE}"
+}
+
+case $1 in
+  "dev") dev;;
+  "gen") gen ;;
+  "prod") prod ;;
+  "wag") wag ;;
+  *) usage ;;
+esac
+
+echo -e "${WHITE}"

@@ -10,71 +10,44 @@ $ cd wagtail_nuxtjs
 ```
 
 ## 2. Build Docker images
-Execute command below to build Docker images with access to local `frontend` and `backend` folders (see `docker-compose.yml`). This way live changes in code would be possible (needs at least 2GB free space):
+Execute this command to build Docker images with access to local `frontend` and `backend` folders (see `docker-compose.yml`). This way live changes in code would be possible (needs at least 2GB free space):
 ```bash
-$ ./dev
+$ ./run dev
 ```
-## 3. Open frontend
-If there were no errors you should be able to open **http://localhost:8000** and see example NuxtJS page made using Vuetify with GraphQL for fetching test.
+## 3. Create Wagtail superuser 
+Execute this command in console while docker dev images are running to be able to run `./manage.py`:
+```bash
+$ ./run wag
+```
 
-**Web endpoints:**
-- Frontend: http://localhost:8000
+## 4. Test if http endpoints are working
+Open Wagtail admin panel to add some subpages to `Home` with `News Page` type.
+Then open frontend to test if GraphQL api is fetching data.
+
 - Backend admin panel: http://localhost:7999/admin *(remember to add some NewsPages to test api!)*
+- Simple frontend with GraphQL test: http://localhost:8000
 - GraphQL console for testing: http://localhost:7999/api/graphiql
 - GraphQL api: http://localhost:7999/api/graphql *(try `/api/graphql/?query articles { articles {title intro}}`)*
 - Wagtail api: http://localhost:7999/api/v2/ *(try `/api/v2/pages` to test)*
 
-## 4. Create Wagtail superuser 
-You can access backend Docker image to create superuser using `manage.py`:
-```bash
-$ docker exec -it `docker ps|grep backend|awk '{print $1}'` bash
-$ ./manage.py createsuperuser
-```
-
-## 5. Add some articles
-Open **http://localhost:7999/admin** and add some articles as subpages of Home with `News Page` model.
-
-## 6. Test fetching in frontend
-Open **http://localhost:8000** again, click `re-fetch` button (or refresh page) and see if page titles are visible in sidebar menu. After clicking on title, full content should appear in main window.
-
-## 7. Customize everything you want
-Now you can develop your application. Take a look at all config files to see what is going on.
-Also **remember to change SECRET_KEY in `backend/backend/settings/base.py` before deploying!**.
-You can generate new secret key using command from backend Docker image:
-```bash
-$ ./manage.py shell -c "from django.core.management.utils import get_random_secret_key; print(get_random_secret_key())"
-```
 You can also install [Vue.js devtools](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd/related) and [Apollo Client Tools](https://chrome.google.com/webstore/detail/apollo-client-devtools/jdkknkkbebbapilgoeccciglkfbmbnfm) for Chrome/Brave to make your work easier.
 
 ---
 
-# **Deploying for production**:
+# **For production**:
 
-## 1. Set `.env` file and test settings
-Go to `backend/` and rename `sample.env` to `.env` (next step will do it for you for default setup), edit it and change settings you want including `SECRET_KEY`:
-```bash
-$ mv ./sample.env ./.env
-$ nano ./.env # or vim, mcedit, code etc.
-```
-Do not set up SSL redirect until you test that everything will work without it.
-`MAIN_URL` is used by nuxt for api endpoint (`/api/graphql` is added automaticaly in `nuxtjs.config.ts`).
-
-## 2. Generate static files for NuxtJS
-Edit 
-```bash
-$ ./nuxt
-```
-
-## 2. Run containers for production
+## 1. Run containers for production
 ```bash
 $ ./prod
 ```
 
-## 3. Test if Nginx proxy responds
+## 2. Test if Nginx proxy responds
 - **http://localhost:8000** should point to NuxtJS static frontend
 - **http://localhost:8000/static** should point to Wagtail static folder
 - **http://localhost:8000/admin** should point to Wagtail admin panel
 - **http://localhost:8000/django-admin** should point to Django admin panel
 
-## 4. Do whatever you like
-Now you can save container and run it on a production server with port forwarding.
+## 2. Customize settings
+If everything went well, stop container and edit `backend/backend/.env` to set important variables. Now you can build again and use images for production server.
+
+Enjoy! :)
