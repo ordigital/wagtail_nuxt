@@ -53,6 +53,8 @@ If everything went well, stop container and edit `backend/backend/.env` to set i
 Run command below to create `wagtail_nuxt_production.tar.gz` file with everything you need to deploy on server:
 - Wagtail with Gunicorn Docker image (port 7999)
 - Wagtail static files directory
+- Wagtail database db.sqlite3
+- Wagtail .env file
 - Nginx public static files 
 - Nginx sample proxy file.
 ```bash

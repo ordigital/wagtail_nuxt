@@ -46,9 +46,11 @@ save() {
     mkdir -p ./export
   echo -e "\n${GREEN}--[ Saving docker image… ]--${WHITE}\n"
   docker save -o ./export/wagtail_gunicorn.tar wagtail_nuxt_web || echo -e "${PURPLE}Something went wrong!${WHITE}"
-  echo -e "\n${GREEN}--[ Saving static, public files and nginx example config… ]--${WHITE}\n"
+  echo -e "\n${GREEN}--[ Saving static, public files, database, .env and nginx example config… ]--${WHITE}\n"
   cp ./nginx/nginx.conf ./export
   cp -R ./backend/static ./export
+  cp ./backend/db.sqlite3 ./export
+  cp ./backend/backend/.env ./export
   cp -R ./frontend/.output/public ./export
   echo -e "\n${GREEN}--[ Saving wagtail_nuxt_production.tar.gz…]--${WHITE}\n"
   tar czf ./wagtail_nuxt_production.tar.gz export
