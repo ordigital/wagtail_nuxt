@@ -6,6 +6,6 @@ services:
     build: ./frontend/
     volumes:
       - ./frontend:/usr/src/nuxt-app:rw
-    environment:
-      - API_ENDPOINT=http://localhost:8000/api/graphql
+    env_file:
+    - ./backend/backend/.env
     command: [sh, -c, "npm install && npm run generate"]

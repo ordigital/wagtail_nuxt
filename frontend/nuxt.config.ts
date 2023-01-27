@@ -21,7 +21,7 @@ export default({
     apollo: {
         clients: {
             default: {
-                httpEndpoint: process.env.API_ENDPOINT || 'http://localhost:7999/api/graphql', // remember to change later
+                httpEndpoint: process.env.MAIN_URL + '/api/graphql' || 'http://localhost:7999/api/graphql', // remember to change later
                 websocketsOnly: false,
                 connectToDevTools: true,
                 tokenStorage: 'cookie',

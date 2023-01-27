@@ -51,14 +51,16 @@ You can also install [Vue.js devtools](https://chrome.google.com/webstore/detail
 # **Deploying for production**:
 
 ## 1. Set `.env` file and test settings
-Go to `backend/` and rename `sample.env` to `.env`, edit it and change settings you want including `SECRET_KEY`:
+Go to `backend/` and rename `sample.env` to `.env` (next step will do it for you for default setup), edit it and change settings you want including `SECRET_KEY`:
 ```bash
 $ mv ./sample.env ./.env
 $ nano ./.env # or vim, mcedit, code etc.
 ```
 Do not set up SSL redirect until you test that everything will work without it.
+`MAIN_URL` is used by nuxt for api endpoint (`/api/graphql` is added automaticaly in `nuxtjs.config.ts`).
 
 ## 2. Generate static files for NuxtJS
+Edit 
 ```bash
 $ ./nuxt
 ```
