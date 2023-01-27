@@ -75,11 +75,11 @@ Example:
 docker run -d \
      --name wagtail  \
      --mount type=bind,source=/LOCAL/db.sqlite3,target=/app/db.sqlite3 \
-     --mount type=bind,source=/LOCAL/.env /app/backend/.env \
+     --mount type=bind,source=/LOCAL/.env,target=/app/backend/.env \
      --restart=unless-stopped \
      -p 7999:7999 \
      wagtail_nuxt_web \
-     ./docker-entrypoint.prod.sh\
+     ./docker-entrypoint.prod.sh
 ```
 
 # Enjoy! :)

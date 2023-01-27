@@ -66,7 +66,7 @@ save() {
   echo -e "${YELLOW}docker run -d \\n\
      --name wagtail \\n\
      --mount type=bind,source=/LOCAL/db.sqlite3,target=/app/db.sqlite3 \\n\
-     --mount type=bind,source=/LOCAL/.env /app/backend/.env \\n\
+     --mount type=bind,source=/LOCAL/.env,target=/app/backend/.env \\n\
      --restart=unless-stopped \\n\
      -p 7999:7999 \\n\
      wagtail_nuxt_web \\n\
