@@ -38,7 +38,7 @@ You can also install [Vue.js devtools](https://chrome.google.com/webstore/detail
 
 ## 1. Run containers for production
 ```bash
-$ ./prod
+$ ./run prod
 ```
 
 ## 2. Test if Nginx proxy responds
