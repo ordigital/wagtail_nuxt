@@ -27,8 +27,8 @@ INSTALLED_APPS = [
     "home",
     "search",
     "app",
-    'rest_framework',
-    'wagtail.api.v2',
+    "rest_framework",
+    "wagtail.api.v2",
     "graphene_django",
     "corsheaders", # needed for dev
     
@@ -70,15 +70,6 @@ MIDDLEWARE = [
     # CORS headers for dev
     "corsheaders.middleware.CorsMiddleware",
     "django.middleware.common.CommonMiddleware",
-]
-
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:8000",
-      # whitelist localhost for axios/apollo requests
-]
-
-CSRF_TRUSTED_ORIGINS = [
-    'http://localhost:8000'
 ]
 
 ROOT_URLCONF = "backend.urls"

@@ -23,11 +23,11 @@ $ ./run wag
 Open Wagtail admin panel to add some subpages to `Home` with `News Page` type.
 Then open frontend to test if GraphQL api is fetching data.
 
-- **Backend admin panel: http://localhost:7999/admin** *(remember to add some NewsPages to test api!)*
+- **Backend admin panel: http://localhost:8000/admin** *(remember to add some NewsPages to test api!)*
 - **Simple frontend with GraphQL test: http://localhost:8000**
-- GraphQL console for testing: http://localhost:7999/api/graphiql
-- GraphQL api: http://localhost:7999/api/graphql *(try `/api/graphql/?query articles { articles {title intro}}`)*
-- Wagtail api: http://localhost:7999/api/v2/ *(try `/api/v2/pages` to test)*
+- GraphQL console for testing: http://localhost:8000/api/graphiql
+- GraphQL api: http://localhost:8000/api/graphql *(try `/api/graphql/?query articles { articles {title intro}}`)*
+- Wagtail api: http://localhost:8000/api/v2/ *(try `/api/v2/pages` to test)*
 
 You can also install [Vue.js devtools](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd/related) and [Apollo Client Tools](https://chrome.google.com/webstore/detail/apollo-client-devtools/jdkknkkbebbapilgoeccciglkfbmbnfm) for Chrome/Brave to make your work easier.
 

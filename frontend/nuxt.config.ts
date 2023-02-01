@@ -1,7 +1,15 @@
+const srvCfg = process.env.NODE_DEV !== 'production' ? 
+    { 
+        proxy: { 
+            '/api':         'http://localhost:7999',
+            '/admin':       'http://localhost:7999',
+            '/django-admin':'http://localhost:7999',
+            '/static':      'http://localhost:7999',
+        } 
+    } : {};
+
 export default({
-        
-
-
+    
     modules: ['@nuxtjs/apollo'],
     
     css: [
@@ -21,13 +29,13 @@ export default({
     apollo: {
         clients: {
             default: {
-                httpEndpoint: process.env.MAIN_URL + '/api/graphql' || 'http://localhost:7999/api/graphql', // remember to change later
+                httpEndpoint: '/api/graphql',
                 websocketsOnly: false,
                 connectToDevTools: true,
                 tokenStorage: 'cookie',
-                authType: 'Bearer',
-                authHeader: 'Authorization',
-                tokenName: "wagtail-token",
+                // authType: 'Bearer',
+                // authHeader: 'Authorization',
+                // tokenName: "wagtail-token",
             }
         },
     },
@@ -36,8 +44,8 @@ export default({
         define: {
           'process.env.DEBUG': false,
         },
-    },
-
+         server: srvCfg,
+    }
 
 
 

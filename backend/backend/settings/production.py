@@ -8,6 +8,7 @@ load_dotenv(os.path.join(PROJECT_DIR,".env"))
 
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
+MAIN_URL =  os.environ.get("MAIN_URL").split(",")
 ALLOWED_HOSTS =  os.environ.get("ALLOWED_HOSTS").split(",")
 CORS_ALLOWED_ORIGINS = os.environ.get("MAIN_URL").split(",")
 CSRF_TRUSTED_ORIGINS = os.environ.get("MAIN_URL").split(",")

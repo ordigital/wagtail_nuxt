@@ -6,20 +6,22 @@ services:
     volumes:
       # This mounts local ./backend for applying changes in Wagtail!
       - ./backend:/app
-    ports:
-      - "7999:7999"
+    # ports:
+    #   - "7999:7999"
     command: ["./docker-entrypoint.sh"]
+    network_mode: "host" # vite proxy fails with error 500 without host network
 
   frontend:
     build: ./frontend/
     volumes:
       # This mounts local ./frontend for applying changes in NuxtJS!
       - ./frontend:/usr/src/nuxt-app
-    ports:
-      - "8000:8000"
-      - "24678:24678"
+    # ports:
+    #   - "8000:8000"
+    #   - "24678:24678"
     command: [sh, -c, "npm install && npm run dev"]
     environment:
-      - URL_BACKEND_SERVER=http://backend:7999
+      - API_URL="http://localhost:7999"
     depends_on:
       - backend
+    network_mode: "host" # vite proxy fails with error 500 without host network
