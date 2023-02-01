@@ -30,7 +30,7 @@ prod() {
   env_dir="backend/backend"
   env_file=".env"
   env_sample="sample.env"
-  test -f ${env_dir}/${env_file} || cp ${env_dir}/{$env_sample} ${env_dir}/${env_file} && echo "Using .env file created from sample.env!\n"
+  test -f ${env_dir}/${env_file} || cp ${env_dir}/${env_sample} ${env_dir}/${env_file} && echo "Using .env file created from sample.env!\n"
   echo -e "\n${GREEN}--[ Building production images… ]--${WHITE}\n"
   docker-compose -f docker-compose.prod.yml up --remove-orphans --build --force-recreate
 }
