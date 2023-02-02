@@ -30,7 +30,7 @@ INSTALLED_APPS = [
     "rest_framework",
     "wagtail.api.v2",
     "graphene_django",
-    "corsheaders", # needed for dev
+    # "corsheaders", # non needed for dev anymore since proxy works
     
     "wagtail.contrib.forms",
     "wagtail.contrib.redirects",
@@ -67,9 +67,10 @@ MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "wagtail.contrib.redirects.middleware.RedirectMiddleware",
    
-    # CORS headers for dev
-    "corsheaders.middleware.CorsMiddleware",
-    "django.middleware.common.CommonMiddleware",
+    # CORS headers
+    # "corsheaders.middleware.CorsMiddleware"
+    # "corsheaders.middleware.CorsMiddleware",
+    # "django.middleware.common.CommonMiddleware",
 ]
 
 ROOT_URLCONF = "backend.urls"
